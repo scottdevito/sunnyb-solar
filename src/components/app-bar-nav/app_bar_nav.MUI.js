@@ -6,6 +6,7 @@ import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import PhoneIcon from 'material-ui-icons/Phone';
 
 import NavMenu from './nav_menu.MUI';
 
@@ -64,10 +65,11 @@ function AppBarNav(props) {
             >
               Pricing Plans
             </StyledNavLink>
-
+            <StyledPhoneIcon />
             <StyledPhoneNum>(516) 123-4567</StyledPhoneNum>
           </ToolbarRightGroup>
           <ToolbarRightGroupMobile>
+            <StyledPhoneIcon />
             <StyledPhoneNum>(516) 123-4567</StyledPhoneNum>
             <StyledDropdown>
               <NavMenu />
@@ -132,4 +134,10 @@ const ToolbarRightGroupMobile = styled.div`
 
 const StyledDropdown = styled.div`
   margin-left: 1rem;
+`;
+
+const StyledPhoneIcon = styled(PhoneIcon)`
+  margin-top: 4.5px;
+  font-size: 20px;
+  color: #f79522;
 `;
