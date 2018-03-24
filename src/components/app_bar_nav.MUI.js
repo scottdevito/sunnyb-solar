@@ -65,6 +65,10 @@ function AppBarNav(props) {
 
             <StyledPhoneNum>(516) 123-4567</StyledPhoneNum>
           </ToolbarRightGroup>
+          <ToolbarRightGroupMobile>
+            <StyledPhoneNum>(516) 123-4567</StyledPhoneNum>
+            <StyledDropdown>Menu</StyledDropdown>
+          </ToolbarRightGroupMobile>
         </Toolbar>
       </AppBar>
     </div>
@@ -104,4 +108,24 @@ const ToolbarRightGroup = styled.div`
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
+`;
+
+const ToolbarRightGroupMobile = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+
+  @media (min-width: 601px) {
+    display: none;
+  }
+`;
+
+const StyledDropdown = styled.div`
+  margin-left: 0.5rem;
 `;
