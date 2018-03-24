@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import HomeScreen from './screens/home_screen';
 import AboutScreen from './screens/about_screen';
 import PricingScreen from './screens/pricing_screen';
-import AppBarNav from './components/app_bar_nav.MUI';
+import AppBarNav from './components/app-bar-nav/app_bar_nav.MUI';
 
 class App extends Component {
   render() {

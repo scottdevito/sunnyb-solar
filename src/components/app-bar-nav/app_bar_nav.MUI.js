@@ -7,6 +7,8 @@ import Typography from 'material-ui/Typography';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
+import NavMenu from './nav_menu.MUI';
+
 const styles = {
   root: {
     flexGrow: 1,
@@ -17,7 +19,7 @@ function AppBarNav(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="default">
+      <AppBar position="static" color="inherit">
         <Toolbar>
           <Typography variant="title" color="inherit">
             Sunny B Solar
@@ -67,7 +69,9 @@ function AppBarNav(props) {
           </ToolbarRightGroup>
           <ToolbarRightGroupMobile>
             <StyledPhoneNum>(516) 123-4567</StyledPhoneNum>
-            <StyledDropdown>Menu</StyledDropdown>
+            <StyledDropdown>
+              <NavMenu />
+            </StyledDropdown>
           </ToolbarRightGroupMobile>
         </Toolbar>
       </AppBar>
@@ -127,5 +131,5 @@ const ToolbarRightGroupMobile = styled.div`
 `;
 
 const StyledDropdown = styled.div`
-  margin-left: 0.5rem;
+  margin-left: 1rem;
 `;
