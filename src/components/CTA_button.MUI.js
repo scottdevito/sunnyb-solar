@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import Button from 'material-ui/Button';
 
-// We can inject some CSS into the DOM.
 const styles = {
   button: {
     background: 'linear-gradient(45deg, #7DA453 20%, #AED581 100%)',

@@ -12,6 +12,13 @@ class App extends Component {
       <Router>
         <div className="App">
           <AppBarNav />
+          <Route
+            pattern="/"
+            render={props => {
+              window.scrollTo(0, 0);
+              return null;
+            }}
+          />
           <Route exact path="/" component={HomeScreen} />
           <Route path="/about" component={AboutScreen} />
           <Route path="/pricing" component={PricingScreen} />
