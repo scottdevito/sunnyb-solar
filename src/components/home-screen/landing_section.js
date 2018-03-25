@@ -8,8 +8,10 @@ const LandingSection = () => {
   return (
     <LandingSectionWrapper>
       <LandingIntro>
-        <LandingHeader>We Can Help You Save Monthly</LandingHeader>
-        <p>Some little text subtitle paragraph thing down here somewhere.</p>
+        <LandingHeader>We Can Help You Save Every Month</LandingHeader>
+        <LandingSubHeader>
+          Some little text subtitle paragraph thing down here somewhere.
+        </LandingSubHeader>
         <p>Contact us for a free no-obligation estimate.</p>
         <CTAButton>Get A Free Estimate</CTAButton>
       </LandingIntro>
@@ -41,12 +43,17 @@ const LandingHeader = styled.h1`
   margin-bottom: 0.5rem;
 `;
 
+const LandingSubHeader = styled.p`
+  margin-bottom: 0;
+`;
+
 const LandingIntro = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   margin-left: 3rem;
   margin-right: 1.5rem;
+  max-width: 30rem;
 
   @media (max-width: 768px) {
     margin: 1rem;
