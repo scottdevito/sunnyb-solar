@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import MenuIcon from 'material-ui-icons/Menu';
 
-class NavMenu extends Component {
+class MobileNavMenu extends Component {
   state = {
     anchorEl: null,
   };
@@ -50,7 +50,7 @@ class NavMenu extends Component {
   }
 }
 
-export default NavMenu;
+export default MobileNavMenu;
 
 const StyledMenuLink = styled(Link)`
   text-decoration: none;
