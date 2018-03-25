@@ -66,11 +66,15 @@ function AppBarNav(props) {
               Pricing Plans
             </StyledNavLink>
             <StyledPhoneIcon />
-            <StyledPhoneNum>(516) 123-4567</StyledPhoneNum>
+            <StyledPhoneNum href="tel:+1-516-123-4567">
+              (516) 123-4567
+            </StyledPhoneNum>
           </ToolbarRightGroup>
           <ToolbarRightGroupMobile>
             <StyledPhoneIcon />
-            <StyledPhoneNum>(516) 123-4567</StyledPhoneNum>
+            <StyledPhoneNum href="tel:+1-516-123-4567">
+              (516) 123-4567
+            </StyledPhoneNum>
             <StyledDropdown>
               <MobileNavMenu />
             </StyledDropdown>
@@ -104,8 +108,10 @@ const StyledNavLink = styled(NavLink)`
   }
 `;
 
-const StyledPhoneNum = styled.p`
+const StyledPhoneNum = styled.a`
   font-weight: bold;
+  text-decoration: none;
+  color: #000;
 `;
 
 const ToolbarRightGroup = styled.div`
