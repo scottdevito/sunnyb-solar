@@ -41,6 +41,11 @@ const LandingHeader = styled.h1`
   line-height: normal;
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 2.25rem;
+    font-weight: 300;
+  }
 `;
 
 const LandingSubHeader = styled.p`
