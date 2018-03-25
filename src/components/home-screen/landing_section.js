@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import HouseSVG from '../assets/HouseGraphic.svg';
-import CTAButton from './CTA_button.MUI';
+import HouseSVG from '../../assets/HouseGraphic.svg';
+import CTAButton from '../CTA_button.MUI';
 
 const LandingSection = () => {
   return (
     <LandingSectionWrapper>
       <LandingIntro>
-        <h2>We Can Help You Save Every Month</h2>
+        <LandingHeader>We Can Help You Save Monthly</LandingHeader>
         <p>Some little text subtitle paragraph thing down here somewhere.</p>
         <p>Contact us for a free no-obligation estimate.</p>
         <CTAButton>Get A Free Estimate</CTAButton>
@@ -31,6 +31,14 @@ const LandingSectionWrapper = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
   }
+`;
+
+const LandingHeader = styled.h1`
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 `;
 
 const LandingIntro = styled.div`
