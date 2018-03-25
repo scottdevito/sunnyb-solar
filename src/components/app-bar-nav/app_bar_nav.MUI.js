@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import PhoneIcon from 'material-ui-icons/Phone';
 
-import NavMenu from './nav_menu.MUI';
+import MobileNavMenu from './nav_menu.MUI';
 
 const styles = {
   root: {
@@ -20,7 +20,7 @@ function AppBarNav(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="inherit">
+      <AppBar position="fixed" color="inherit">
         <Toolbar>
           <Typography variant="title" color="inherit">
             Sunny B Solar
@@ -72,7 +72,7 @@ function AppBarNav(props) {
             <StyledPhoneIcon />
             <StyledPhoneNum>(516) 123-4567</StyledPhoneNum>
             <StyledDropdown>
-              <NavMenu />
+              <MobileNavMenu />
             </StyledDropdown>
           </ToolbarRightGroupMobile>
         </Toolbar>
@@ -100,7 +100,7 @@ const StyledNavLink = styled(NavLink)`
     background-repeat: no-repeat;
     background-position: 0 100%;
     background-size: 100% 0.2em;
-    transition: 1s ease all;
+    transition: 0.5s ease all;
   }
 `;
 
