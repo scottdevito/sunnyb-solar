@@ -66,5 +66,5 @@ const StyledMenuLinkHome = styled(Link)`
 `;
 
 const StyledMenuIcon = styled(MenuIcon)`
-  padding-top: 8px;
+  padding-top: 6px;
 `;

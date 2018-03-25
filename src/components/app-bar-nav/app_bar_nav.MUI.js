@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import PhoneIcon from 'material-ui-icons/Phone';
 
-import MobileNavMenu from './nav_menu.MUI';
+import MobileNavMenu from './mobile_nav_menu.MUI';
 
 const styles = {
   root: {
