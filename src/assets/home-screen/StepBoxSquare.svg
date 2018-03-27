@@ -1,0 +1,11 @@
+<svg width="280" height="138" viewBox="0 0 280 138" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>StepBoxSquare</title>
+<g id="Canvas" transform="translate(-231 -1620)">
+<g id="StepBoxSquare">
+<use xlink:href="#path0_fill" transform="translate(231 1620)" fill="#FCD306" fill-opacity="0.7"/>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 0 6C 0 2.68629 2.68629 0 6 0L 274 0C 277.314 0 280 2.68629 280 6L 280 132C 280 135.314 277.314 138 274 138L 6 138C 2.68629 138 0 135.314 0 132L 0 6Z"/>
+</defs>
+</svg>

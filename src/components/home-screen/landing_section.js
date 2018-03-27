@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import HouseSVG from '../../assets/HouseGraphic.svg';
+import HouseSVG from '../../assets/home-screen/HouseGraphic.svg';
 import CTAButton from '../CTA_button.MUI';
 
 const LandingSection = () => {
