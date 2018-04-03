@@ -69,7 +69,7 @@ const HowItWorksHeader = styled.h1`
 
 const HowItWorksProcessWrapper = styled.div`
   margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -98,10 +98,13 @@ const StepBoxHeader = styled.h2`
 `;
 
 const StepBoxTriangleGraphic = styled.img`
+  margin-left: 3rem;
+
   @media (max-width: 768px) {
     margin-top: 2rem;
     margin-bottom: 2rem;
     transform: rotate(90deg) scale(0.7);
+    margin-left: 0;
   }
 `;
 
