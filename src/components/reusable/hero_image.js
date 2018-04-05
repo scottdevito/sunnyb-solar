@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import SunnyBHeroImg from '../assets/SunnyBHero.jpg';
-import SunnyBHeroImgMobile from '../assets/SunnyBHeroMobile.jpg';
+import SunnyBHeroImg from '../../assets/SunnyBHero.jpg';
+import SunnyBHeroImgMobile from '../../assets/SunnyBHeroMobile.jpg';
 
 const HeroImage = () => {
   return <Hero />;
