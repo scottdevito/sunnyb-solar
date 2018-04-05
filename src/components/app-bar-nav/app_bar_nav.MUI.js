@@ -9,6 +9,7 @@ import styled from 'styled-components';
 import PhoneIcon from 'material-ui-icons/Phone';
 
 import MobileNavMenu from './mobile_nav_menu.MUI';
+import SunnyBLogo from '../../assets/SunnyBLogoSmall.svg';
 
 const styles = {
   root: {
@@ -22,9 +23,7 @@ function AppBarNav(props) {
     <div className={classes.root}>
       <AppBar position="fixed" color="inherit">
         <Toolbar>
-          <Typography variant="title" color="inherit">
-            Sunny B Solar
-          </Typography>
+          <StyledLogo src={SunnyBLogo} alt="Sunny B Logo" />
           <ToolbarRightGroup>
             <StyledNavLink
               exact
@@ -146,4 +145,8 @@ const StyledPhoneIcon = styled(PhoneIcon)`
   margin-top: 4.5px;
   font-size: 20px;
   color: #f79522;
+`;
+
+const StyledLogo = styled.img`
+  width: 6rem;
 `;

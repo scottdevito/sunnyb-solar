@@ -103,4 +103,5 @@ const LegalText = styled.p`
   color: #b9bcc7;
   text-align: center;
   padding: 0.25rem;
+  font-size: 0.85rem;
 `;
