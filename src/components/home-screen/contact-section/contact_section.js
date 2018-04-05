@@ -49,8 +49,8 @@ class ContactSection extends Component {
           <ContactFormHeader>Sign up for a free estimate</ContactFormHeader>
           <ContactFormSubHeader>100% free, no obligation</ContactFormSubHeader>
           <ContactFormSubText>
-            Submit your name and email and someone will reach out to you to
-            answer any questions you may have
+            We respect your privacy and will never use your information to spam
+            you with emails or calls.
           </ContactFormSubText>
           <ContactForm
             onContactInputChange={this.onContactInputChange}
@@ -67,6 +67,7 @@ class ContactSection extends Component {
               color: 'white',
               padding: '0 30px',
               marginTop: '2.5rem',
+              boxShadow: '0 2px 2px 2px rgba(0, 0, 0, .1)',
             }}
           >
             Submit
@@ -87,16 +88,19 @@ const ContactSectionWrapper = styled.div`
   align-items: center;
   text-align: center;
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 8rem;
 `;
 
 const ContactCloudBannerGraphic = styled.img`
   width: 100%;
 `;
 
-const ContactFormWrapper = styled.div``;
+const ContactFormWrapper = styled.div`
+  margin-top: 2rem;
+`;
 
 const ContactFormHeader = styled.h1`
+  font-size: 2.5rem;
   font-weight: 400;
   margin-bottom: 1rem;
 `;
@@ -110,7 +114,7 @@ const ContactFormSubHeader = styled.h2`
 const ContactFormSubText = styled.h4`
   font-weight: 350;
   color: #4f4f4f;
-  max-width: 425px;
+  max-width: 450px;
   margin-left: 1rem;
   margin-right: 1rem;
 `;

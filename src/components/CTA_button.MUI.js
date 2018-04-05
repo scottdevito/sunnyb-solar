@@ -11,7 +11,7 @@ const styles = {
     color: 'white',
     height: 48,
     padding: '0 30px',
-    boxShadow: '0 3px 5px 2px rgba(174, 213, 129, .3)',
+    boxShadow: '0 2px 2px 2px rgba(0, 0, 0, .1)',
     width: '55%',
     marginTop: '1rem',
   },

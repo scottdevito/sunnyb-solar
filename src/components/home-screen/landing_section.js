@@ -9,10 +9,12 @@ const LandingSection = () => {
     <LandingSectionWrapper>
       <LandingIntro>
         <LandingHeader>We Can Help You Save Every Month</LandingHeader>
-        <LandingSubHeader>
+        <LandingSubHeaderTop>
           Some little text subtitle paragraph thing down here somewhere.
+        </LandingSubHeaderTop>
+        <LandingSubHeader>
+          Contact us for a free no-obligation estimate.
         </LandingSubHeader>
-        <p>Contact us for a free no-obligation estimate.</p>
         <CTAButton>Get A Free Estimate</CTAButton>
       </LandingIntro>
       <HouseGraphic />
@@ -49,6 +51,11 @@ const LandingHeader = styled.h1`
 `;
 
 const LandingSubHeader = styled.p`
+  font-weight: 350;
+  color: #4f4f4f;
+`;
+
+const LandingSubHeaderTop = styled(LandingSubHeader)`
   margin-bottom: 0;
 `;
 
