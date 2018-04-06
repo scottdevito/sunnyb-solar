@@ -10,15 +10,19 @@ class PricingSection extends Component {
       <PricingSectionWrapper>
         {MockPrices.map(plan => {
           return (
-            <PlanWrapper>
+            <PlanWrapper key={plan.id}>
               <PlanGraphic />
               <PlanInfo>
-                <h2>{plan.name}</h2>
-                <h4>{plan.price}</h4>
-                <p>{plan.description}</p>
-                <CTAButton bgColor="linear-gradient(180deg, #F79522 -29.08%, rgba(247, 149, 34, 0.49) 145.66%)">
-                  Request Info
-                </CTAButton>
+                <PlanText>
+                  <h2>{plan.name}</h2>
+                  <h4>{plan.price}</h4>
+                  <p>{plan.description}</p>
+                </PlanText>
+                <PlanButtonWrapper>
+                  <CTAButton bgColor="linear-gradient(180deg, #F79522 -29.08%, rgba(247, 149, 34, 0.49) 145.66%)">
+                    Request Info
+                  </CTAButton>
+                </PlanButtonWrapper>
               </PlanInfo>
             </PlanWrapper>
           );
@@ -64,4 +68,15 @@ const PlanGraphic = styled.div`
 const PlanInfo = styled.div`
   flex: 1.25;
   padding: 1rem;
+`;
+
+const PlanText = styled.div`
+  height: 70%;
+  flex: 0.7;
+`;
+
+const PlanButtonWrapper = styled.div`
+  height: 30%;
+  flex: 0.3;
+  width: 100%;
 `;
