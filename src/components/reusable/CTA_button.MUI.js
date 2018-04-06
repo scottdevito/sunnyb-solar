@@ -5,7 +5,6 @@ import Button from 'material-ui/Button';
 
 const styles = {
   button: {
-    background: 'linear-gradient(45deg, #7DA453 20%, #AED581 100%)',
     borderRadius: 3,
     border: 0,
     color: 'white',
@@ -19,7 +18,14 @@ const styles = {
 
 function CTAButton(props) {
   return (
-    <Button className={props.classes.button}>
+    <Button
+      className={props.classes.button}
+      style={
+        props.bgColor
+          ? { background: props.bgColor }
+          : { background: 'linear-gradient(45deg, #7DA453 20%, #AED581 100%)' }
+      }
+    >
       {props.children ? props.children : 'class names'}
     </Button>
   );
