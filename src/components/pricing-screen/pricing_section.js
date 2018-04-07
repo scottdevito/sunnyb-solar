@@ -53,6 +53,12 @@ const PlanWrapper = styled.div`
   min-width: 40%;
   min-height: 20rem;
   margin: 4rem;
+
+  @media (max-width: 768px) {
+    margin: 2rem;
+    max-width: 80%;
+    min-width: 80%;
+  }
 `;
 
 const PlanGraphic = styled.div`
