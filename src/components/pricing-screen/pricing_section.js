@@ -42,6 +42,8 @@ const PricingSectionWrapper = styled.div`
   align-items: center;
   align-content: center;
   flex-wrap: wrap;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 `;
 
 const PlanWrapper = styled.div`
@@ -50,7 +52,7 @@ const PlanWrapper = styled.div`
   max-width: 40%;
   min-width: 40%;
   min-height: 20rem;
-  margin: 3rem;
+  margin: 4rem;
 `;
 
 const PlanGraphic = styled.div`

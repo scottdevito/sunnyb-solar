@@ -20,4 +20,11 @@ export const MockPrices = [
     price: '$10000',
     id: 3,
   },
+  {
+    name: 'Fourth Plan',
+    description:
+      'Some description about the price of the fourth plan. More expensive than the third, second, and first plan.',
+    price: '$18000',
+    id: 4,
+  },
 ];
