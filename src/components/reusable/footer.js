@@ -7,11 +7,10 @@ const Footer = () => {
       <NavLinkSection>
         <NavLinksWrapper>
           <NavLinks>
-            <NavLinkHeader>Nav Link Header</NavLinkHeader>
-            <NavLink>Link One</NavLink>
-            <NavLink>Link Two</NavLink>
-            <NavLink>Link Three</NavLink>
-            <NavLink>Link Four</NavLink>
+            <NavLinkHeader>Additional Links</NavLinkHeader>
+            <NavLink>Privacy Policy</NavLink>
+            <NavLink>Copyright Information</NavLink>
+            <NavLink>License Information</NavLink>
           </NavLinks>
         </NavLinksWrapper>
         <Logo>logo</Logo>
