@@ -8,7 +8,7 @@ export const MockPrices = [
 
   {
     name: 'Second Plan',
-    description: `Some description about the price of the second plan. This one's a little bit more expensive for some reason`,
+    description: `Some description about the price of the second plan. This one's a little bit more expensive.`,
     price: '$5400',
     id: 2,
   },
