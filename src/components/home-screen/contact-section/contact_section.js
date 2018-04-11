@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Button from 'material-ui/Button';
+import { cloudFunctions } from '../../../startup/db_init';
 
 import ContactCloudBanner from '../../../assets/home-screen/ContactCloudBanner.svg';
 import ContactForm from './contact_form.MUI';
@@ -35,7 +36,16 @@ class ContactSection extends Component {
     //     });
     //   }
     // }
-    return console.log('Submit name and email');
+    const sendEstimateFormEmail = cloudFunctions.httpsCallable(
+      'sendEstimateFormEmail'
+    );
+
+    sendEstimateFormEmail({
+      clientEmail: this.state.email,
+      clientName: this.state.name,
+    }).then(() => {
+      return console.log('Information sent successfully.');
+    });
   };
 
   render() {

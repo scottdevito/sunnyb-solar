@@ -31,3 +31,5 @@ node_modules
 storage.rules
 startup/
 \.vscode/settings\.json
+
+functions/nodemailer_config\.js
