@@ -29,9 +29,11 @@ exports.sendEstimateFormEmail = functions.https.onCall(data => {
             <h3>${data.clientEmail}</h3>
           </html>`,
   };
+
   return mailTransport.sendMail(mailOptions, (err, res) => {
     if (err) {
       console.log(err);
     }
+    return true;
   });
 });

@@ -42,7 +42,7 @@ function ContactForm(props) {
           }}
           htmlFor="custom-color-input"
         >
-          {props.isError ? 'Please enter a name' : 'Name'}
+          {props.isError ? 'Please enter a name' : 'Name*'}
         </InputLabel>
         <Input
           classes={{
@@ -64,7 +64,7 @@ function ContactForm(props) {
           }}
           htmlFor="custom-color-input"
         >
-          {props.isError ? 'Please enter a valid email' : 'Email'}
+          {props.isError ? 'Please enter a valid email' : 'Email*'}
         </InputLabel>
         <Input
           classes={{

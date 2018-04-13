@@ -11,6 +11,7 @@ class ContactSection extends Component {
     email: '',
     name: '',
     isError: false,
+    estimateFormSent: false,
   };
 
   onContactInputChange = (event, inputValue) => {
@@ -22,33 +23,39 @@ class ContactSection extends Component {
   };
 
   onSubmitEmailToMailingList = () => {
-    // if ((this.state.email !== '') && (this.state.name !== '')) {
-    //   // Clear error if there is one
-    //   this.setState(prevState => {
-    //     return { isError: false };
-    //   });
+    if (this.state.email === '' && this.state.name === '') {
+      return this.setState(prevState => {
+        return { isError: true };
+      });
+    }
 
-    //   try {
-    //     this.props.submitEmailToMailingList(this.state.email);
-    //   } catch (error) {
-    //     this.setState(prevState => {
-    //       return { isError: !prevState.isError };
-    //     });
-    //   }
-    // }
-    const sendEstimateFormEmail = cloudFunctions.httpsCallable(
-      'sendEstimateFormEmail'
-    );
-
-    sendEstimateFormEmail({
-      clientEmail: this.state.email,
-      clientName: this.state.name,
-    }).then(() => {
-      return console.log('Information sent successfully.');
+    // Clear error if there is one
+    this.setState(prevState => {
+      return { isError: false };
     });
+
+    try {
+      const sendEstimateFormEmail = cloudFunctions.httpsCallable(
+        'sendEstimateFormEmail'
+      );
+
+      sendEstimateFormEmail({
+        clientEmail: this.state.email,
+        clientName: this.state.name,
+      }).then(() => {
+        this.setState(prevState => {
+          return { estimateFormSent: true };
+        });
+      });
+    } catch (error) {
+      this.setState(prevState => {
+        return { isError: !prevState.isError };
+      });
+    }
   };
 
   render() {
+    console.log(this.state.estimateFormSent);
     return (
       <ContactSectionWrapper>
         <ContactCloudBannerGraphic
