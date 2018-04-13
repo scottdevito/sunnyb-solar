@@ -1,21 +1,27 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import { MockPrices } from './pricing_mock';
 import CTAButton from '../reusable/CTA_button.MUI';
 
 class PricingSection extends Component {
+  componentDidMount() {
+    if (this.props.pricingData.length === 0) {
+      this.props.fetchPricingData();
+    }
+  }
+
   render() {
+    let { pricingData } = this.props;
     return (
       <PricingSectionWrapper>
-        {MockPrices.map(plan => {
+        {(pricingData || []).map(plan => {
           return (
-            <PlanWrapper key={plan.id}>
+            <PlanWrapper key={plan.pricingId}>
               <PlanGraphic />
               <PlanInfo>
                 <PlanText>
                   <h2>{plan.name}</h2>
-                  <h4>{plan.price}</h4>
+                  <h4>${plan.price}</h4>
                   <p>{plan.description}</p>
                 </PlanText>
                 <PlanButtonWrapper>

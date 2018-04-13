@@ -23,7 +23,7 @@ class ContactSection extends Component {
   };
 
   onSubmitEmailToMailingList = () => {
-    if (this.state.email === '' && this.state.name === '') {
+    if (this.state.email === '' || this.state.name === '') {
       return this.setState(prevState => {
         return { isError: true };
       });
@@ -55,7 +55,6 @@ class ContactSection extends Component {
   };
 
   render() {
-    console.log(this.state.estimateFormSent);
     return (
       <ContactSectionWrapper>
         <ContactCloudBannerGraphic

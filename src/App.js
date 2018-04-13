@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import HomeScreen from './screens/home_screen';
+import HomeScreenContainer from './redux/containers/home_screen.C';
 import AboutScreen from './screens/about_screen';
-import PricingScreen from './screens/pricing_screen';
+import PricingScreenContainer from './redux/containers/pricing_screen.C';
 import AppBarNav from './components/app-bar-nav/app_bar_nav.MUI';
 
 class App extends Component {
@@ -19,9 +19,9 @@ class App extends Component {
               return null;
             }}
           />
-          <Route exact path="/" component={HomeScreen} />
+          <Route exact path="/" component={HomeScreenContainer} />
           <Route path="/about" component={AboutScreen} />
-          <Route path="/pricing" component={PricingScreen} />
+          <Route path="/pricing" component={PricingScreenContainer} />
         </div>
       </Router>
     );

@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import GoogleMapsEmbedded from '../../assets/GoogleMapsEmbedded.png';
+
 const Footer = () => {
   return (
     <FooterWrapper>
@@ -11,9 +13,12 @@ const Footer = () => {
             <NavLink>Privacy Policy</NavLink>
             <NavLink>Copyright Information</NavLink>
             <NavLink>License Information</NavLink>
+            <NavLink>Terms of Service</NavLink>
           </NavLinks>
         </NavLinksWrapper>
-        <Logo>logo</Logo>
+        <Logo>
+          <GoogleMap />
+        </Logo>
       </NavLinkSection>
       <LegalSection>
         <LegalText>
@@ -41,13 +46,20 @@ const FooterWrapper = styled.div`
 const NavLinkSection = styled.div`
   display: flex;
   flex-direction: row;
-  height: 16rem;
+  height: 20rem;
   width: 100%;
   background: linear-gradient(
     102.98deg,
     #4fc3f7 -56.6%,
     rgba(139, 246, 255, 0.61) 190.58%
   );
+
+  @media (max-width: 768px) {
+    height: 40rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const NavLinksWrapper = styled.div`
@@ -59,6 +71,10 @@ const NavLinksWrapper = styled.div`
   height: 100%;
   width: 100%;
   padding-left: 5rem;
+
+  @media (max-width: 768px) {
+    padding-left: 0;
+  }
 `;
 
 const NavLinks = styled.div`
@@ -90,6 +106,15 @@ const Logo = styled.div`
   flex-grow: 1;
   height: 100%;
   width: 100%;
+`;
+
+const GoogleMap = styled.div`
+  background-image: url(${GoogleMapsEmbedded});
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 238px;
+  width: 232px;
+  margin-top: 0.75rem;
 `;
 
 const LegalSection = styled.div`

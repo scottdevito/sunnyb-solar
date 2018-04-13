@@ -8,6 +8,12 @@ import ContactSection from '../components/home-screen/contact-section/contact_se
 import Footer from '../components/reusable/footer';
 
 class HomeScreen extends Component {
+  componentDidMount() {
+    if (this.props.pricingData.length === 0) {
+      this.props.fetchPricingData();
+    }
+  }
+
   render() {
     return (
       <div>
