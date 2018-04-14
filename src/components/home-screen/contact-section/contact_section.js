@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Button from 'material-ui/Button';
-import { cloudFunctions } from '../../../startup/db_init';
+import { Element } from 'react-scroll';
 
+import { cloudFunctions } from '../../../startup/db_init';
 import ContactCloudBanner from '../../../assets/home-screen/ContactCloudBanner.svg';
 import ContactForm from './contact_form.MUI';
 
@@ -61,6 +62,7 @@ class ContactSection extends Component {
           src={ContactCloudBanner}
           alt="Contact Cloud Banner"
         />
+        <Element name="contact-section" className="element" />
         <ContactFormWrapper>
           <ContactFormHeader>Sign up for a free estimate</ContactFormHeader>
           <ContactFormSubHeader>100% free, no obligation</ContactFormSubHeader>

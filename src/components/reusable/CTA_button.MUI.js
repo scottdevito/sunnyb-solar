@@ -25,6 +25,7 @@ function CTAButton(props) {
           ? { background: props.bgColor }
           : { background: 'linear-gradient(45deg, #7DA453 20%, #AED581 100%)' }
       }
+      onClick={props.CTAOnClick ? () => props.CTAOnClick() : () => {}}
     >
       {props.children ? props.children : 'class names'}
     </Button>

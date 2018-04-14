@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import HouseSVG from '../../assets/home-screen/HouseGraphic.svg';
 import CTAButton from '../reusable/CTA_button.MUI';
 
-const LandingSection = () => {
+const LandingSection = props => {
   return (
     <LandingSectionWrapper>
       <LandingIntro>
@@ -15,7 +15,9 @@ const LandingSection = () => {
         <LandingSubHeader>
           Contact us for a free no-obligation estimate.
         </LandingSubHeader>
-        <CTAButton>Get A Free Estimate</CTAButton>
+        <CTAButton CTAOnClick={props.scrollToContactSection}>
+          Get A Free Estimate
+        </CTAButton>
       </LandingIntro>
       <HouseGraphic />
     </LandingSectionWrapper>

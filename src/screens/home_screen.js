@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Events, scrollSpy, scroller } from 'react-scroll';
 
 import HeroImage from '../components/reusable/hero_image';
 import LandingSection from '../components/home-screen/landing_section';
@@ -12,13 +13,34 @@ class HomeScreen extends Component {
     if (this.props.pricingData.length === 0) {
       this.props.fetchPricingData();
     }
+
+    // react-scroll
+    Events.scrollEvent.register('begin', function(to, element) {});
+
+    Events.scrollEvent.register('end', function(to, element) {});
+
+    scrollSpy.update();
   }
+
+  componentWillUnmount() {
+    Events.scrollEvent.remove('begin');
+    Events.scrollEvent.remove('end');
+  }
+
+  scrollToContactSection = () => {
+    scroller.scrollTo('contact-section', {
+      duration: 1400,
+      delay: 0,
+      smooth: 'easeInOutQuart',
+      offset: -120,
+    });
+  };
 
   render() {
     return (
       <div>
         <HeroImage />
-        <LandingSection />
+        <LandingSection scrollToContactSection={this.scrollToContactSection} />
         <TrustedTechnologySection />
         <HowItWorksSection />
         <ContactSection />

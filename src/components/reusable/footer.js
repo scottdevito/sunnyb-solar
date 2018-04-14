@@ -5,7 +5,7 @@ import GoogleMapsEmbedded from '../../assets/GoogleMapsEmbedded.png';
 
 const Footer = () => {
   return (
-    <FooterWrapper>
+    <FooterWrapper id="footer" name="footer" className="element">
       <NavLinkSection>
         <NavLinksWrapper>
           <NavLinks>
