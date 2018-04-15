@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import GoogleMapsEmbedded from '../../assets/GoogleMapsEmbedded.png';
+import GoogleMap from './google_map';
 
 const Footer = () => {
   return (
@@ -106,15 +106,6 @@ const Logo = styled.div`
   flex-grow: 1;
   height: 100%;
   width: 100%;
-`;
-
-const GoogleMap = styled.div`
-  background-image: url(${GoogleMapsEmbedded});
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 238px;
-  width: 232px;
-  margin-top: 0.75rem;
 `;
 
 const LegalSection = styled.div`
