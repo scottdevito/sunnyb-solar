@@ -10,10 +10,12 @@ const LandingSection = props => {
       <LandingIntro>
         <LandingHeader>We Can Help You Save Every Month</LandingHeader>
         <LandingSubHeaderTop>
-          Some little text subtitle paragraph thing down here somewhere.
+          We're passionate about helping you save money on energy. Contact us
+          for a free no-obligation estimate.
         </LandingSubHeaderTop>
         <LandingSubHeader>
-          Contact us for a free no-obligation estimate.
+          We promise to respect your privacy and won't ever contact you without
+          your permission.
         </LandingSubHeader>
         <CTAButton CTAOnClick={props.scrollToContactSection}>
           Get A Free Estimate

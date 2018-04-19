@@ -20,7 +20,7 @@ exports.sendEstimateFormEmail = functions.https.onCall(data => {
 
   const mailOptions = {
     from: 'Sunny B Solar <sunnybsolarny@gmail.com>',
-    to: 'sunnybsolarny@gmail.com',
+    to: 'thn7530@gmail.com',
     subject: `New Estimate Request - ${data.clientName}`,
     html: `<html>
             <h3>${
