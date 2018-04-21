@@ -12,7 +12,7 @@ class ContactSection extends Component {
     email: '',
     name: '',
     isError: false,
-    estimateFormSent: false,
+    isEstimateFormSent: false,
   };
 
   onContactInputChange = (event, inputValue) => {
@@ -45,7 +45,7 @@ class ContactSection extends Component {
         clientName: this.state.name,
       }).then(() => {
         this.setState(prevState => {
-          return { estimateFormSent: true };
+          return { isEstimateFormSent: true };
         });
       });
     } catch (error) {
@@ -63,7 +63,7 @@ class ContactSection extends Component {
           alt="Contact Cloud Banner"
         />
         <Element name="contact-section" className="element" />
-        <ContactFormWrapper>
+        <ContactFormWrapper isEstimateFormSent={this.state.isEstimateFormSent}>
           <ContactFormHeader>Sign up for a free estimate</ContactFormHeader>
           <ContactFormSubHeader>100% free, no obligation</ContactFormSubHeader>
           <ContactFormSubText>
@@ -91,6 +91,9 @@ class ContactSection extends Component {
             Submit
           </Button>
         </ContactFormWrapper>
+        <NotifyBox isEstimateFormSent={this.state.isEstimateFormSent}>
+          <BoxText>Thanks for reaching out. We'll be in touch shortly.</BoxText>
+        </NotifyBox>
       </ContactSectionWrapper>
     );
   }
@@ -115,6 +118,7 @@ const ContactCloudBannerGraphic = styled.img`
 
 const ContactFormWrapper = styled.div`
   margin-top: 2rem;
+  display: ${props => (props.isEstimateFormSent ? 'none' : 'block')};
 `;
 
 const ContactFormHeader = styled.h1`
@@ -135,4 +139,51 @@ const ContactFormSubText = styled.h4`
   max-width: 450px;
   margin-left: 1rem;
   margin-right: 1rem;
+`;
+
+const NotifyBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 7rem;
+  margin-top: 16rem;
+  border-radius: 10px;
+  color: white;
+  height: 6rem;
+  background: linear-gradient(
+    107.19deg,
+    rgba(252, 211, 6, 0.75) 0%,
+    rgba(255, 255, 83, 0.24) 160.78%
+  );
+  border-radius: 6px;
+  display: ${props => (props.isEstimateFormSent ? 'flex' : 'none')};
+
+  @keyframes slidein {
+    from {
+      transform: scaleY(0);
+      transform: translateY(250px);
+      background: linear-gradient(
+        107.19deg,
+        rgba(252, 211, 6, 0.75) 0%,
+        rgba(255, 255, 83, 0.24) 0%
+      );
+    }
+    to {
+      transform: scaleY(1);
+      transform: translateY(0px);
+      background: linear-gradient(
+        107.19deg,
+        rgba(252, 211, 6, 0.75) 0%,
+        rgba(255, 255, 83, 0.24) 160.78%
+      );
+    }
+  }
+  animation: ease 1s slidein;
+`;
+
+const BoxText = styled.p`
+  font-size: 22px;
+  font-weight: 550;
 `;
