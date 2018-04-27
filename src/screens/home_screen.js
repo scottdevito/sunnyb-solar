@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Events, scrollSpy, scroller } from 'react-scroll';
 
-import HeroImage from '../components/reusable/hero_image';
 import LandingSection from '../components/home-screen/landing_section';
 import TrustedTechnologySection from '../components/home-screen/trusted_technology_section';
 import HowItWorksSection from '../components/home-screen/how_it_works_section';
@@ -10,15 +9,9 @@ import Footer from '../components/reusable/footer';
 
 class HomeScreen extends Component {
   componentDidMount() {
-    if (this.props.pricingData.length === 0) {
-      this.props.fetchPricingData();
-    }
-
     // react-scroll
     Events.scrollEvent.register('begin', function(to, element) {});
-
     Events.scrollEvent.register('end', function(to, element) {});
-
     scrollSpy.update();
   }
 
@@ -39,7 +32,6 @@ class HomeScreen extends Component {
   render() {
     return (
       <div>
-        <HeroImage />
         <LandingSection scrollToContactSection={this.scrollToContactSection} />
         <TrustedTechnologySection />
         <HowItWorksSection />
