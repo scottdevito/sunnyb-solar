@@ -64,14 +64,14 @@ function AppBarNav(props) {
               Pricing Plans
             </StyledNavLink>
             <StyledPhoneIcon />
-            <StyledPhoneNum href="tel:+1-516-123-4567">
-              (516) 123-4567
+            <StyledPhoneNum href="tel:+1-516-318-4956">
+              (516) 318-4956
             </StyledPhoneNum>
           </ToolbarRightGroup>
           <ToolbarRightGroupMobile>
             <StyledPhoneIcon />
-            <StyledPhoneNum href="tel:+1-516-123-4567">
-              (516) 123-4567
+            <StyledPhoneNum href="tel:+1-516-318-4956">
+              (516) 318-4956
             </StyledPhoneNum>
             <StyledDropdown>
               <MobileNavMenu />

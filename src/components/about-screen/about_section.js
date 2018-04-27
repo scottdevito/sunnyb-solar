@@ -1,13 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import AboutImg from '../../assets/about-screen/AboutImg.jpg';
-
 const AboutSection = () => {
   return (
     <AboutSectionWrapper>
       <AboutHeader>About Us</AboutHeader>
-      <StyledAboutImg src={AboutImg} alt="About us" />
       <AboutText>
         About us text. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -30,6 +27,8 @@ const AboutSectionWrapper = styled.div`
   align-content: center;
   align-items: center;
   text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 `;
 
 const AboutHeader = styled.h1`
@@ -38,23 +37,12 @@ const AboutHeader = styled.h1`
   background-repeat: no-repeat;
   background-position: 0 100%;
   background-size: 100% 0.2em;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-`;
-
-const StyledAboutImg = styled.img`
-  width: 35%;
-  border-radius: 4px;
-
-  @media (max-width: 768px) {
-    width: 45%;
-  }
 `;
 
 const AboutText = styled.p`
   max-width: 65%;
-  margin-top: 4rem;
   margin-bottom: 6rem;
+  margin-top: 0rem;
 
   @media (max-width: 768px) {
     max-width: 85%;

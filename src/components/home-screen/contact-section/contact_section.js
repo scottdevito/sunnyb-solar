@@ -67,7 +67,8 @@ class ContactSection extends Component {
           <ContactFormHeader>Sign up for a free estimate</ContactFormHeader>
           <ContactFormSubHeader>100% free, no obligation</ContactFormSubHeader>
           <ContactFormSubText>
-            We respect your privacy and will never use your information to spam
+            We respect your privacy and will
+            <BrandHighlight> never</BrandHighlight> use your information to spam
             you with emails or calls.
           </ContactFormSubText>
           <ContactForm
@@ -128,13 +129,13 @@ const ContactFormHeader = styled.h1`
 `;
 
 const ContactFormSubHeader = styled.h2`
-  font-weight: 350;
+  font-weight: 300;
   color: #4f4f4f;
   margin-top: 0.5rem;
 `;
 
 const ContactFormSubText = styled.h4`
-  font-weight: 350;
+  font-weight: 600;
   color: #4f4f4f;
   max-width: 450px;
   margin-left: 1rem;
@@ -186,4 +187,10 @@ const NotifyBox = styled.div`
 const BoxText = styled.p`
   font-size: 22px;
   font-weight: 550;
+`;
+
+const BrandHighlight = styled.span`
+  color: #f79522;
+  font-weight: 550;
+  font-size: 22px;
 `;

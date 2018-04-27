@@ -28,6 +28,11 @@ const StyledGoogleMap = styled.div`
   height: 232px;
   width: 238px;
   margin: 2rem;
+
+  @media (max-width: 768px) {
+    margin-bottom: 8rem;
+    margin-top: 4rem;
+  }
 `;
 
 const MapCanvas = styled.div`
