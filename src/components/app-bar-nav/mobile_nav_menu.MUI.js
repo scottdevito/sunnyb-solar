@@ -41,8 +41,8 @@ class MobileNavMenu extends Component {
           <StyledMenuLink to="/about">
             <MenuItem onClick={this.handleClose}>About Us</MenuItem>
           </StyledMenuLink>
-          <StyledMenuLink to="/pricing">
-            <MenuItem onClick={this.handleClose}>Pricing Plans</MenuItem>
+          <StyledMenuLink to="/solar-info">
+            <MenuItem onClick={this.handleClose}>How Solar Works</MenuItem>
           </StyledMenuLink>
         </Menu>
       </div>

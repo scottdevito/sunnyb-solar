@@ -52,7 +52,7 @@ function AppBarNav(props) {
             </StyledNavLink>
 
             <StyledNavLink
-              to="/pricing"
+              to="/solar-info"
               activeStyle={{
                 backgroundImage:
                   'linear-gradient(120deg, #F79522 0%, #FCD306 100%)',
@@ -61,7 +61,7 @@ function AppBarNav(props) {
                 backgroundSize: '100% 0.2em',
               }}
             >
-              Pricing Plans
+              How Solar Works
             </StyledNavLink>
             <StyledPhoneIcon />
             <StyledPhoneNum href="tel:+1-516-318-4956">
