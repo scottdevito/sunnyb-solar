@@ -11,6 +11,10 @@ class ContactSection extends Component {
   state = {
     email: '',
     name: '',
+    city: '',
+    phone: '',
+    employmentStatus: '',
+    isOkayToContact: false,
     isError: false,
     isEstimateFormSent: false,
   };
@@ -24,7 +28,12 @@ class ContactSection extends Component {
   };
 
   onSubmitEmailToMailingList = () => {
-    if (this.state.email === '' || this.state.name === '') {
+    if (
+      this.state.email === '' ||
+      this.state.name === '' ||
+      this.state.city === '' ||
+      this.state.phone === ''
+    ) {
       return this.setState(prevState => {
         return { isError: true };
       });
@@ -43,6 +52,10 @@ class ContactSection extends Component {
       sendEstimateFormEmail({
         clientEmail: this.state.email,
         clientName: this.state.name,
+        clientCity: this.state.city,
+        clientPhone: this.state.phone,
+        clientEmploymentStatus: this.state.employmentStatus,
+        clientIsOkayToContact: this.state.isOkayToContact,
       }).then(() => {
         this.setState(prevState => {
           return { isEstimateFormSent: true };
@@ -53,6 +66,14 @@ class ContactSection extends Component {
         return { isError: !prevState.isError };
       });
     }
+  };
+
+  handleSelectChange = event => {
+    this.setState({ [event.target.name]: event.target.value });
+  };
+
+  handleCheckChange = event => {
+    this.setState({ [event.target.name]: event.target.checked });
   };
 
   render() {
@@ -73,7 +94,11 @@ class ContactSection extends Component {
           </ContactFormSubText>
           <ContactForm
             onContactInputChange={this.onContactInputChange}
+            handleSelectChange={this.handleSelectChange}
+            handleCheckChange={this.handleCheckChange}
             isError={this.state.isError}
+            employmentStatus={this.state.employmentStatus}
+            isOkayToContact={this.state.isOkayToContact}
           />
 
           <Button
