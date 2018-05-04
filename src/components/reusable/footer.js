@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import GoogleMap from './google_map';
+import Logo from './logo_white_bg';
 
 const Footer = () => {
   return (
@@ -16,9 +16,9 @@ const Footer = () => {
             <NavLink>Terms of Service</NavLink>
           </NavLinks>
         </NavLinksWrapper>
-        <Logo>
-          <GoogleMap />
-        </Logo>
+        <StyledLogo>
+          <Logo />
+        </StyledLogo>
       </NavLinkSection>
       <LegalSection>
         <LegalText>
@@ -97,7 +97,7 @@ const NavLink = styled.p`
   margin-bottom: 0.5rem;
 `;
 
-const Logo = styled.div`
+const StyledLogo = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
