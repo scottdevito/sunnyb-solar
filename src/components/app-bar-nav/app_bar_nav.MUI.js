@@ -14,13 +14,22 @@ const styles = {
   root: {
     flexGrow: 1,
   },
+  navBar: {
+    boxShadow: '0 0 0 0',
+  },
 };
 
 function AppBarNav(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <AppBar position="fixed" color="inherit">
+      <AppBar
+        position="static"
+        color="inherit"
+        classes={{
+          root: classes.navBar,
+        }}
+      >
         <Toolbar>
           <StyledLogo src={SunnyBLogo} alt="Sunny B Logo" />
           <ToolbarRightGroup>
@@ -147,5 +156,12 @@ const StyledPhoneIcon = styled(PhoneIcon)`
 `;
 
 const StyledLogo = styled.img`
-  width: 6rem;
+  width: 10rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0);
+
+  @media(max-width: 768px) {
+    width: 8rem;
+  })
 `;

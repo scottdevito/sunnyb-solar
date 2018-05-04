@@ -25,7 +25,7 @@ exports.sendEstimateFormEmail = functions.https.onCall(data => {
     html: `<html>
             <h2>${
               data.clientName
-            } is interested in an estimate. Their info is:</h2>
+            } is interested in an estimate. Their info is:</h2><br>
             <h3>${data.clientEmail}</h3>
             <h3>${data.clientPhone}</h3>
             <h3>City: ${data.clientCity}</h3>

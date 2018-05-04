@@ -35,7 +35,6 @@ const LandingSectionWrapper = styled.div`
   justify-content: space-around;
   align-items: center;
   align-content: center;
-  margin-top: 5rem;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -73,7 +72,6 @@ const LandingIntro = styled.div`
   max-width: 30rem;
 
   @media (max-width: 768px) {
-    margin: 1rem;
     justify-content: center;
     align-content: center;
     align-items: center;
