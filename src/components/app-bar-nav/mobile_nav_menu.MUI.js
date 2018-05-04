@@ -57,7 +57,7 @@ const StyledMenuLink = styled(Link)`
   color: #000;
 `;
 
-// Seperate styling for Home button width as workaround for active NavLink bug
+// Seperate styling for Home button width as workaround for active NavLink bug - clickable area not 100% width
 // Bug occurs on 'Home' MenuItem when MenuItem wraps Link
 const StyledMenuLinkHome = styled(Link)`
   text-decoration: none;

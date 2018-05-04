@@ -4,7 +4,8 @@ import Button from 'material-ui/Button';
 import { Element } from 'react-scroll';
 
 import { cloudFunctions } from '../../../startup/db_init';
-import ContactCloudBanner from '../../../assets/home-screen/ContactCloudBanner.svg';
+import ContactCloudBannerMobile from '../../../assets/home-screen/ContactCloudBanner.svg';
+import ContactCloudBannerDesktop from '../../../assets/home-screen/ContactCloudBannerDesktop.svg';
 import ContactForm from './contact_form.MUI';
 
 class ContactSection extends Component {
@@ -79,8 +80,12 @@ class ContactSection extends Component {
   render() {
     return (
       <ContactSectionWrapper>
-        <ContactCloudBannerGraphic
-          src={ContactCloudBanner}
+        <ContactCloudBannerGraphicMobile
+          src={ContactCloudBannerMobile}
+          alt="Contact Cloud Banner"
+        />
+        <ContactCloudBannerGraphicDesktop
+          src={ContactCloudBannerDesktop}
           alt="Contact Cloud Banner"
         />
         <Element name="contact-section" className="element" />
@@ -138,8 +143,22 @@ const ContactSectionWrapper = styled.div`
   margin-bottom: 8rem;
 `;
 
-const ContactCloudBannerGraphic = styled.img`
+const ContactCloudBannerGraphicMobile = styled.img`
   width: 100%;
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
+const ContactCloudBannerGraphicDesktop = styled.img`
+  width: 100%;
+display: none;
+
+  @media(min-width: 769px) {
+    display block;
+  }
 `;
 
 const ContactFormWrapper = styled.div`
