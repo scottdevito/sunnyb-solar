@@ -140,7 +140,7 @@ const ContactSectionWrapper = styled.div`
   align-items: center;
   text-align: center;
   width: 100%;
-  margin-bottom: 8rem;
+  margin-bottom: 5rem;
 `;
 
 const ContactCloudBannerGraphicMobile = styled.img`
@@ -162,11 +162,11 @@ display: none;
 `;
 
 const ContactFormWrapper = styled.div`
-  margin-top: 2rem;
   display: ${props => (props.isEstimateFormSent ? 'none' : 'block')};
 `;
 
 const ContactFormHeader = styled.h1`
+  margin-top: 0.5rem;
   font-size: 2.5rem;
   font-weight: 400;
   margin-bottom: 1rem;
